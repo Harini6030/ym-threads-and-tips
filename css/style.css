@@ -1,34 +1,35 @@
-/* style.css - Hot Pink, Cream, Spearmint, Rosewater Palette */
+/* style.css - peach, plum, off white, gold */
 
 :root {
-  --hot-pink: #EF7C8E;
-  --cream: #FAE8E0;
-  --spearmint: #B6E2D3;
-  --rosewater: #D8A7B1;
+  --peach: #f7e5c9;
+  --plum: #48172c;
+  --offwhite: #f7f5e3;
+  --gold: #b0884c;
 }
 
+/* Major background is plum, main accent is peach */
 body {
   margin: 0;
   font-family: 'Poppins', sans-serif;
-  background-color: var(--cream);
-  color: #000; /* Changed to black */
+  background-color: var(--plum);
+  color: var(--offwhite);
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Playfair Display', serif;
-  color: #000; /* Changed to black */
+  color: var(--peach); /* Accent color changed to peach */
 }
 
 header {
-  background-color: var(--rosewater);
-  padding: 20px;
-  text-align: center;
+  background-color: var(--plum);
+  padding: 30px;
+  text-align: left;
 }
 
 header h1 {
   margin: 0;
   font-size: 2em;
-  color: #000; /* Changed to black */
+  color: var(--peach); /* Accent color changed to peach */
 }
 
 nav ul {
@@ -41,33 +42,37 @@ nav ul {
 
 nav a {
   text-decoration: none;
-  color: #000; /* Changed to black */
+  color: var(--prussian-blue);
   font-weight: bold;
 }
 
 .hero {
   text-align: center;
   padding: 60px 20px;
-  background-color: var(--spearmint);
-  color: #000; /* Changed to black */
+  background-color: var(--peach); /* Accent color changed to peach */
+  color: var(--plum);
 }
 
-.hero h2 {
-  font-size: 2rem;
-  margin-bottom: 10px;
-}
-
+.hero h2,
 .hero p {
-  font-size: 1.2rem;
-  margin-bottom: 20px;
+  color: var(--plum);
 }
 
 .shop-btn {
-  background-color: var(--hot-pink);
-  color: white;
+  background-color: var(--plum);
+  color: var(--peach); /* Accent color changed to peach */
   padding: 10px 20px;
   border-radius: 20px;
   text-decoration: none;
+  border: 2px solid var(--peach);
+  font-family: 'Poppins', sans-serif;
+  font-weight: bold;
+}
+
+.shop-btn:hover {
+  background-color: var(--peach);
+  color: var(--plum);
+  cursor: pointer;
 }
 
 .collection {
@@ -101,45 +106,47 @@ nav a {
   display: inline-block;
   margin: 15px;
   width: 250px;
+  background: var(--offwhite);
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
 }
 
 .product img {
   width: 100%;
   height: auto;
-  border-radius: 10px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px 10px 0 0;
 }
 
 .product p {
   font-family: 'Poppins', sans-serif;
   margin-top: 10px;
-  color: #000; /* Changed to black */
+  color: var(--plum);
   font-size: 1.1rem;
+  padding-bottom: 10px;
 }
 
 footer {
   text-align: center;
   padding: 20px;
-  background-color: var(--rosewater);
-  color: #000; /* Changed to black */
-}
-
-.shop-btn:hover {
-  background-color: var(--spearmint);
-  color: var(--hot-pink);
-  cursor: pointer;
+  background-color: var(--peach); /* Accent color changed to peach */
+  color: var(--plum);
 }
 
 .product-gallery {
   padding: 30px;
-  background-color: var(--cream);
+  background-color: var(--plum);
   text-align: center;
 }
 
 .product-gallery h2 {
   font-family: 'Playfair Display', serif;
   font-size: 2rem;
-  color: #000; /* Changed to black */
+  color: var(--peach); /* Accent color changed to peach */
+}
+
+/* Remove aside/nav bar styles if not used */
+aside, aside nav a {
+  display: none !important;
 }
 
 
