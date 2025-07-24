@@ -23,7 +23,10 @@ h1, h2, h3, h4, h5, h6 {
 header {
   background-color: var(--plum);
   padding: 30px;
-  text-align: left;
+  text-align:left;
+  display: flex;
+  align-items: center;
+  gap: 20px;
 }
 
 header h1 {
@@ -60,19 +63,24 @@ nav a {
 
 .shop-btn {
   background-color: var(--plum);
-  color: var(--peach); /* Accent color changed to peach */
-  padding: 10px 20px;
+  color: var(--peach);
+  padding: 10px 24px;
   border-radius: 20px;
   text-decoration: none;
-  border: 2px solid var(--peach);
+  border: 2px solid var(--plum);
   font-family: 'Poppins', sans-serif;
   font-weight: bold;
+  display: inline-block;
+  margin-top: 24px;
+  font-size: 1.1rem;
+  transition: background 0.2s, color 0.2s;
 }
 
 .shop-btn:hover {
   background-color: var(--peach);
   color: var(--plum);
   cursor: pointer;
+  border-color: var(--peach);
 }
 
 .collection {
@@ -88,18 +96,32 @@ nav a {
   margin-top: 20px;
 }
 
+.product-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 32px; /* more space between cards */
+  margin-top: 30px;
+}
+
 .product-card {
-  background: white;
-  padding: 10px;
-  border-radius: 10px;
-  width: 180px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  background: var(--offwhite, #fff);
+  padding: 20px;
+  border-radius: 16px;
+  width: 280px;         /* increased width */
+  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .product-card img {
-  width: 100%;
-  height: auto;
-  border-radius: 10px;
+  width: 220px;         /* increased image size */
+  height: 220px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 16px;
 }
 
 .product {
@@ -141,12 +163,176 @@ footer {
 .product-gallery h2 {
   font-family: 'Playfair Display', serif;
   font-size: 2rem;
-  color: var(--peach); /* Accent color changed to peach */
+  color: var(--plum); /* Accent color changed to peach */
+}
+
+.site-logo {
+  height: 80px; /* Increased from 48px to 80px */
+  width: auto;
+  display: inline-block;
+  vertical-align: middle;
 }
 
 /* Remove aside/nav bar styles if not used */
 aside, aside nav a {
   display: none !important;
 }
+
+/* 🌐 MOBILE STYLES START HERE */
+@media (max-width: 768px) {
+  /* General body adjustments */
+  body {
+    padding: 10px;
+    font-size: 14px;
+    overflow-x: hidden;
+  }
+
+  /* HEADER SECTION */
+  header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 10px 0;
+  }
+
+  header h1 {
+    font-size: 22px;
+    line-height: 1.2;
+  }
+
+  /* NAVIGATION BAR */
+  .navbar {
+    flex-direction: column;
+    font-size: 14px;
+    gap: 8px;
+  }
+
+  .navbar a {
+    display: block;
+    padding: 8px;
+    text-align: center;
+  }
+
+  /* HERO BANNER */
+  .hero-section {
+    padding: 15px;
+    text-align: center;
+  }
+
+  .hero-section h1 {
+    font-size: 20px;
+  }
+
+  .hero-section p {
+    font-size: 14px;
+  }
+
+  /* PRODUCT GRID */
+  .product-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 0;
+  }
+
+  .product-card {
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+
+  .product-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+  }
+
+  .product-card h3 {
+    font-size: 16px;
+    margin: 8px 0;
+  }
+
+  /* FOOTER */
+  footer {
+    padding: 20px 10px;
+    text-align: center;
+    font-size: 12px;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  footer a {
+    display: block;
+    margin: 4px 0;
+  }
+
+  /* BUTTONS */
+  .btn,
+  button {
+    font-size: 14px;
+    padding: 10px 16px;
+    width: 100%;
+    margin: 8px 0;
+  }
+
+  /* FORMS (if any) */
+  input[type="text"],
+  input[type="email"],
+  textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    margin-bottom: 12px;
+  }
+
+  /* SOCIAL ICONS OR LINKS */
+  .social-icons {
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+
+  /* Hide large desktop-only sections if needed */
+  .desktop-only {
+    display: none;
+  }
+
+  /* You can also create mobile-only sections */
+  .mobile-only {
+    display: block;
+  }
+}
+
+.graceful-banner {
+  background-color: var(--peach) !important;
+  color: var(--plum);
+  text-align: center;
+  padding: 50px 20px 30px 20px;
+  margin: 30px auto;
+  border-radius: 16px;
+  max-width:500px;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.04);
+}
+
+.graceful-banner h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.8rem;
+  color: var(--plum);
+  margin-bottom: 12px;
+}
+
+.graceful-banner p {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.2rem;
+  color: var(--plum);
+  margin: 0;
+}
+
+.shop-all h2 {
+  text-align: center;
+}
+
 
 
