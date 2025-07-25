@@ -31,8 +31,9 @@ header {
 
 header h1 {
   margin: 0;
-  font-size: 2em;
+  font-size: 3em;
   color: var(--peach); /* Accent color changed to peach */
+  text-shadow: #b0884c 2px 2px 4px; /* Gold shadow for depth */
 }
 
 nav ul {
@@ -49,15 +50,16 @@ nav a {
   font-weight: bold;
 }
 
-.hero {
+.graceful-banner {
   text-align: center;
   padding: 60px 20px;
   background-color: var(--peach); /* Accent color changed to peach */
   color: var(--plum);
+  width: 400px
 }
 
-.hero h2,
-.hero p {
+.graceful-banner h2,
+.graceful-banner p {
   color: var(--plum);
 }
 
@@ -193,10 +195,11 @@ aside, aside nav a {
     align-items: center;
     text-align: center;
     padding: 10px 0;
+    font-size: larger;
   }
 
   header h1 {
-    font-size: 22px;
+    font-size: 30px;
     line-height: 1.2;
   }
 
@@ -211,21 +214,35 @@ aside, aside nav a {
     display: block;
     padding: 8px;
     text-align: center;
-  }
-
-  /* HERO BANNER */
-  .hero-section {
-    padding: 15px;
-    text-align: center;
-  }
-
-  .hero-section h1 {
     font-size: 20px;
   }
 
-  .hero-section p {
-    font-size: 14px;
-  }
+.graceful-banner {
+  background-color: var(--peach) !important;
+  color: var(--plum);
+  text-align: center;
+  padding: 30px 15px;
+  margin: 30px auto;
+  border-radius: 16px;
+  width: 200px;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.04);
+  height: 280px;
+  background-size: cover;
+}
+
+.graceful-banner h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 22px;
+  color: var(--plum);
+  margin-bottom: 12px;
+}
+
+.graceful-banner p {
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  color: var(--plum);
+  margin: 0;
+}
 
   /* PRODUCT GRID */
   .product-grid {
@@ -252,6 +269,7 @@ aside, aside nav a {
   .product-card h3 {
     font-size: 16px;
     margin: 8px 0;
+    color: var(--plum) #000;
   }
 
   /* FOOTER */
@@ -272,7 +290,7 @@ aside, aside nav a {
   .btn,
   button {
     font-size: 14px;
-    padding: 10px 16px;
+    padding: 8px 16px;
     width: 100%;
     margin: 8px 0;
   }
@@ -332,6 +350,108 @@ aside, aside nav a {
 
 .shop-all h2 {
   text-align: center;
+  color: var(--peach);
+}
+
+.shop-all h3 {
+  text-align: center;
+  color: var(--plum);
+}
+
+.shop-all p {
+  text-align: center;
+  color: var(--plum);
+}
+
+.Best-Sellers h2 {
+  text-align: center;
+  color: var(--peach);
+}
+
+.Best-Sellers h3 {
+  text-align: center;
+  color: var(--plum);
+}
+
+.Best-Sellers p {
+  text-align: center;
+  color: var(--plum);
+}
+
+.Sarees h2 {
+  text-align: center;
+  color: var(--peach);
+}
+
+.Sarees h3 {
+  text-align: center;
+  color: var(--plum);
+}
+
+.Sarees p {
+  text-align: center;
+  color: var(--plum);
+}
+
+.Tops h2 {
+  text-align: center;
+  color: var(--peach);
+}
+
+.Tops h3 {
+  text-align: center;
+  color: var(--plum);
+}
+
+.Tops p {
+  text-align: center;
+  color: var(--plum);
+}
+
+.Salwars h2 {
+  text-align: center;
+  color: var(--peach);
+}
+
+.Salwars h3 {
+  text-align: center;
+  color: var(--plum);
+}
+
+.Salwars p {
+  text-align: center;
+  color: var(--plum);
+}
+
+.About-Us {
+  padding: 60px 20px;
+  background-color: var(--plum);
+  display: flex;
+  justify-content: center;
+}
+
+.about-text {
+  max-width: 800px;
+  text-align: center;
+  background-color:var(--peach);
+  padding: 40px 30px;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+color:var(--plum);
+}
+
+.about-text h2 {
+  font-size: 2rem;
+  color:var(--plum);
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.about-text p {
+  font-size: 1rem;
+  line-height: 1.8;
+  margin-bottom: 15px;
+ color:var(--plum);
 }
 
 
